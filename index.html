@@ -1,28 +1,36 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="yy.sd"/>
-    <meta name="keywords" content="yy.sd"/>
-    <title>YY.SD</title>
-    <link rel="stylesheet" type="text/css" href="static/example.css"/>
+    <meta name="description" content="xxx.com"/>
+    <meta name="keywords" content="xxx.com"/>
+    <title>xxx.com</title>
+    <link rel="stylesheet" type="text/css" href="static/dmaku.css"/>
 </head>
+
 <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false"
       onselectstart="event.returnValue=false">
+
 <div id="container">
+
     <div>
-        <h1 id="h1">YY.SD</h1>
-        <h2 id="h2">Coming soon</h2>
+        <h1 id="h1">xxx.com</h1>
+        <h2 id="h2">Is for sale</h2>
         <p>&nbsp;</p>
-        <p><strong><a id="a1" href="mailto:example@example.com">Email: hi[at]imfog.com</a></strong></p>
+        <p><strong><a id="mailme" href="mailto:xxx@xxx.com">Email: xxx@xxx.com</a></strong></p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
     </div>
+
 </div>
+
 <canvas id="canvas"></canvas>
+
+
 <script>
     var Stats = function () {
         var e = Date.now(), t = e, i = 0, n = 1 / 0, r = 0, s = 0, o = 1 / 0, a = 0, l = 0, h = 0,
@@ -71,14 +79,17 @@
             }
         }
     };
-    var currentDomain = document.domain.split('.').slice(-2).join('.');
-    document.querySelector('meta[name="description"]').setAttribute('content', currentDomain);
-    document.querySelector('meta[name="keywords"]').setAttribute('content', currentDomain);
-    document.title = currentDomain;
-    document.getElementById('h1').textContent = currentDomain;
-    document.getElementById('a1').textContent = 'Email: domain@' + currentDomain;
-    document.getElementById('a1').href = 'mailto:domain@' + currentDomain;
 </script>
-<script type="text/javascript" src="static/example.js"></script>
+<script type="text/javascript" src="static/dmaku.js"></script>
+<script>
+    const curdomain = window.location.host;
+    document.title = curdomain;
+    document.getElementById('h1').innerHTML = curdomain;
+
+	const a = document.getElementById('mailme');
+	a.href = 'mailto:me@'+curdomain;
+    a.innerHTML = curdomain;
+
+</script>
 </body>
 </html>
